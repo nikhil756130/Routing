@@ -1,7 +1,9 @@
 <div class="row">
+  <button (click)="navigateToHome()">Go to Home page</button>
   <div class="col-xs-12 col-sm-4">
     <div class="list-group">
       <a
+      [routerLink]="['/users', user.id, user.name]"
         href="#"
         class="list-group-item"
         *ngFor="let user of users">

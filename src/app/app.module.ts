@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
@@ -18,7 +19,10 @@ import { ServersService } from './servers/servers.service';
 const appRoutes: Routes = [
 { path: '', component: HomeComponent},
 { path: 'users', component: UsersComponent},
-{ path: 'servers', component: ServersComponent}, 
+{ path: 'users/:id/:name', component: UserComponent},
+{ path: 'servers/:id', component: ServersComponent},
+{ path: 'servers/:id/edit', component: EditServerComponent }, 
+
 ];
 
 @NgModule({
